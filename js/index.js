@@ -1,10 +1,14 @@
 const form = document.querySelector('.form');
-const addBtn = document.getElementById('increase');
-const reduceBtn = document.getElementById('reduce');
-const state = document.getElementById('state');
-const cart = document.getElementById('cart');
+// const addBtn = document.getElementById('increase');
+// const reduceBtn = document.getElementById('reduce');
+// const state = document.getElementById('state');
+// const cart = document.getElementById('cart');
 const price = document.getElementById('price');
 const clatarvaProducts = document.querySelectorAll('.calatrava');
+
+// HOME DECOR
+const hoverImg = document.querySelectorAll('.hover-img');
+const imgPlaceholder= document.getElementById('image-placeholder')
 // const prodImg = document.getElementById('prod-img')
 
 
@@ -32,35 +36,6 @@ function productId(imgSrc){
 
 productNaviagtor()
 
-// export const runFunc = productNaviagtor();
-// console.log(runFunc)
-    
-
-function handleState(){
-    state.value = 0;
-
-    addBtn.addEventListener('click', (e) => {
-        state.value ++;
-        cart.value = state.value
-        addedToCart(cart.value)
-
-        return cart.value
-
-
-    })
-
-    reduceBtn.addEventListener('click', (e) => {
-        state.value --
-        cart.value = state.value
-        addedToCart(cart.value)
-        return cart.value
-        
-    })
-}
-
-
-handleState();
-
 
 
 function addedToCart(val){
@@ -75,3 +50,30 @@ function addedToCart(val){
     
 
 }
+
+
+
+// HOVER IMAGE STYLES
+function imageAnimation(){
+    hoverImg.forEach((eachImg) => {
+        eachImg.addEventListener('mouseover', (e) => {
+            // alert('0000')
+            imgPlaceholder.classList.add('animate-placeholder')
+            imgPlaceholder.src = eachImg.src
+        } )
+
+
+        // if (imgPlaceholder.className === 'animate-placeholder'){
+        //     imgPlaceholder.classList.remove('animate-placeholder')
+        // }
+        
+        eachImg.addEventListener('mouseout', (e) => {
+            imgPlaceholder.classList.remove('animate-placeholder')
+        })
+    })
+}
+imageAnimation()
+
+// hoverImg.forEach((eachImg) => {
+//     eachImg.addEventListener('')
+// })
