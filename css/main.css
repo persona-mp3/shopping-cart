@@ -1,0 +1,255 @@
+:root{
+    --btnPadding: .4rem;
+    --border: 1px solid grey;
+    --borderRadius: 6px;
+    --actionColor:rgb(29, 131, 156);
+
+}
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.divider{
+    padding: .8rem;
+    position: relative;
+}
+
+input{
+    all: unset;
+    border: var(--border);
+    padding: .38rem;
+
+}
+
+
+button{
+    all: unset;
+    border: var(--border);
+    border-radius: var(--borderRadius);
+    text-align: center;
+    text-transform: uppercase;
+    padding: var(--btnPadding)
+
+}
+
+.nav-container{
+    border-bottom: 1px solid;
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    /* padding: .68rem; */
+    align-items: center;
+    position: relative;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+}
+
+.links{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-self: center;
+    gap: .4rem;
+    padding: .4rem
+}
+
+h3, p{
+    font-weight: 300;
+}
+
+p{
+    width: 46%;
+    text-align: left;
+    padding: .8rem;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    padding: .6rem;
+    align-self: center;
+    border-bottom: 1px solid transparent;
+}
+
+a:hover{
+    border-bottom: var(--border);
+    transition: 0.3s ease-in;
+}
+.product-container {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 60%;
+    overflow-x: scroll;
+    align-self: center;
+    gap: .8rem;
+    position: relative;
+}
+.card-container{
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    border: 1px solid;
+    padding: .8rem;
+}
+
+.img-container{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    border: 1px solid
+}
+
+.img-container img {
+    width: 50%
+}
+
+#name-block {
+    position: fixed;
+    left: 28%;
+    top: 50%;
+}
+
+#price{
+    display: inline-block;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+    gap: .4rem;
+    padding: .8rem;
+    width: 80%;
+    position: relative;
+}
+
+#clicked-img {
+    width: 72%
+}
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    gap: .4rem;
+    border: var(--border);
+    width: 100%;
+    padding: .4rem;
+    margin-top: -14.8%
+    /* position: absolute; */
+
+}
+
+#form p{
+    align-self: center;
+    margin-left: 14%;
+}
+
+.form-control{
+    padding: .24rem;
+    display: flex;
+    flex-direction: column;
+    width: 40%
+}
+
+#form .form-control:nth-child(4){
+    flex-direction: row;
+    justify-content: space-between;
+    /* width: 20%; */
+    gap: .4rem;
+}
+
+.form-control button{
+    width: 50%;
+}
+
+#add-to-cart{
+    font-weight: 700;
+    width: 40%
+}
+
+#add-to-cart:hover {
+    border: 1px solid transparent;
+    border-radius: 30px;
+    color: white;
+    background-color: rgb(29, 131, 156);
+    transition: border-radius 1s ease-in-out, background-color 1s ease-in-out, border 1s ease-in-out;
+}
+
+
+#cart-counter {
+    width: 24px;
+    height: 24px;
+    /* background-color: black; */
+    border-radius: 50%;
+    margin-left: 80%;
+    position: fixed;
+    z-index: 1;
+    top: 0.8%;
+    color: var(--actionColor);
+    font-size: medium;
+    text-align: center;
+    font-weight: bold;
+}
+
+.cart-feedback {
+    padding: .4rem;
+    border-radius: var(--borderRadius);
+    position: absolute;
+    background-color: rgb(53, 206, 135);
+    margin-top: -12%;
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
+
+
+.active {
+    margin-top: 5.8%;
+    transition: margin-top 0.6s ease;
+}
+
+.deactivate {
+    margin-top: -12%;
+    transition: margin-top 1s ease;
+}
+
+.render-card-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    border: var(--border);
+    width: 60%;
+    margin-top: 2%;
+    border-radius: var(--borderRadius);
+}
+
+.render-imgContainer {
+    width: 40%
+}
+
+.render-photo {
+    width: 50%
+}
+
+.render-infoContainer {
+    width: 50%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

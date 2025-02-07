@@ -1,0 +1,35 @@
+{
+    "images": [
+        {
+            "name": "calatrava1",
+            "src": "./img/01.png",
+            "price": 1000,
+            "title": "Hydrogen"
+        },
+        {
+            "name": "calatrava2",
+            "src": "./img/02.png",
+            "price": 840,
+            "title": "Helium"
+        },
+        {
+            "name": "calatrava3",
+            "src": "./img/03.png",
+            "price": 300,
+            "title": "Lithium"
+        },
+        {
+            "name": "calatrava4",
+            "src": "./img/04.png",
+            "price": 700,
+            "title": "Beryllium"
+        },
+        {
+            "name": "calatrava5",
+            "src": "./img/05.png",
+            "price": 890,
+            "title": "Boron"
+        }
+    ],
+    "titles": ["Hydrogen", "Helium", "Lithium", "Beryllium", "Boron"]
+}
