@@ -53,13 +53,10 @@ function handleState(){
     addBtn.addEventListener('click', (e) => {
         state.value ++;
         return 
-
-
     })
 
     reduceBtn.addEventListener('click', (e) => {
         state.value --
-        
     })
 }
 
@@ -68,6 +65,7 @@ handleState()
 
 findImg(clickedID)
 
+let updateCart = []
 
 // count how many times user clicked submit
 function countCartButtonClicks(){
@@ -99,6 +97,9 @@ function countCartButtonClicks(){
                 if (clickedID === image.name){
                     // create new object for name and price
                     const cartItem = {name: image.title, price: Number(image.price), amountSelected: currentState ,total: totalPrice}
+                    updateCart.push(cartItem);
+                    currentCount = updateCart.length
+
                     localStorage.setItem(`${image.title}`, JSON.stringify(cartItem))
                     return;
                 }

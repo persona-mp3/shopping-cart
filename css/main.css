@@ -27,6 +27,7 @@ input{
     all: unset;
     border: var(--border);
     padding: .38rem;
+    color: black;
 
 }
 
@@ -89,7 +90,7 @@ a:hover{
 .product-container {
     display: flex;
     flex-wrap: nowrap;
-    width: 60%;
+    width: 58%;
     overflow-x: scroll;
     align-self: center;
     gap: .8rem;
@@ -252,4 +253,44 @@ a:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.render-totalPrice {
+    padding: .4rem;
+    align-self: center;
+    font-weight: 500;
+    margin-left: 36%;
+    margin-top: 4%;
+}
+
+.render-btnContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: .8rem;
+    padding: .2rem;
+    align-self: center;
+    margin-left:-28%;
+
+}
+
+.render-btn, .render-payBtn {
+    all: unset;
+    padding-left: calc(var(--btnPadding) * 2) ;
+    padding-right: calc(var(--btnPadding) * 2) ;
+    border: var(--border);
+    border-radius: var(--borderRadius);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.render-amt{
+    font-weight: 480;
+    border: 0;
+    text-align: left;
+    width: fit-content;
+    margin-left: -8%
+}
+
+.render-payBtn {
+    margin-top: .8rem
 }
