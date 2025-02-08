@@ -1,10 +1,16 @@
+import imagesJSON from '../images.json'  assert {type: 'json'}
+const images = imagesJSON.images;
+const titles = imagesJSON.titles;
+
 const form = document.querySelector('.form');
-// const addBtn = document.getElementById('increase');
-// const reduceBtn = document.getElementById('reduce');
-// const state = document.getElementById('state');
-// const cart = document.getElementById('cart');
 const price = document.getElementById('price');
 const clatarvaProducts = document.querySelectorAll('.calatrava');
+const calatravaImg = document.querySelectorAll('.calatrava-img')
+const calatravaContainer = document.querySelector('.product-container')
+const calatravaPlaceholder = document.querySelector('.calatrava-placeholder')
+
+const sideNav = document.querySelector('.side-nav');
+const menuToggle = document.querySelector('.menu-toggle')
 
 // HOME DECOR
 const hoverImg = document.querySelectorAll('.hover-img');
@@ -54,26 +60,70 @@ function addedToCart(val){
 
 
 // HOVER IMAGE STYLES
-function imageAnimation(){
+function wabisSabiAnimation(){
     hoverImg.forEach((eachImg) => {
         eachImg.addEventListener('mouseover', (e) => {
             // alert('0000')
             imgPlaceholder.classList.add('animate-placeholder')
             imgPlaceholder.src = eachImg.src
         } )
-
-
-        // if (imgPlaceholder.className === 'animate-placeholder'){
-        //     imgPlaceholder.classList.remove('animate-placeholder')
-        // }
         
         eachImg.addEventListener('mouseout', (e) => {
             imgPlaceholder.classList.remove('animate-placeholder')
         })
     })
-}
-imageAnimation()
 
-// hoverImg.forEach((eachImg) => {
-//     eachImg.addEventListener('')
-// })
+}
+
+const imgTitle = document.getElementById('imgTitle')
+
+function calatravaAnimation(){
+    calatravaImg.forEach((eachImg) => {
+
+        images.forEach((image) => {
+
+            eachImg.addEventListener('mouseover', (e) => {
+                calatravaPlaceholder.src = eachImg.src
+                calatravaContainer.classList.add('animate-calatrava')
+    
+                if (eachImg.id === image.name){
+                    imgTitle.innerText = image.title
+                } else {
+                    return;
+                }
+                
+    
+            })
+    
+            eachImg.addEventListener('mouseout', (e) => {
+                calatravaPlaceholder.classList.remove('animate-calatrava')
+            })
+    
+    
+
+        })
+        // eachImg.addEventListener('mouseover', (e) => {
+        //     calatravaPlaceholder.src = eachImg.src
+        //     calatravaContainer.classList.add('animate-calatrava')
+
+            
+            
+
+        // })
+
+        // eachImg.addEventListener('mouseout', (e) => {
+        //     calatravaPlaceholder.classList.remove('animate-calatrava')
+        // })
+
+    })
+
+}
+
+
+menuToggle.addEventListener('click', (e) => {
+    sideNav.classList.toggle('active-side-nav')
+    menuToggle.classList.toggle('active-toggle')
+})
+calatravaAnimation()
+wabisSabiAnimation()
+

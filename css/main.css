@@ -22,6 +22,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 .divider{
@@ -52,11 +53,10 @@ button:hover {
 }
 
 .nav-container{
-    border-bottom: 1px solid;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.356);
     display: flex;
     width: 80%;
     justify-content: space-between;
-    /* padding: .68rem; */
     align-items: center;
     position: relative;
     position: sticky;
@@ -64,6 +64,114 @@ button:hover {
     background-color: white;
     z-index: 1;
 }
+
+.nav-container .menu {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+
+
+/* SIDE NAVIGATION */
+.side-nav {
+    border: var(--border);
+    position: fixed;
+    left: -100vh;
+    display: flex;
+    flex-direction: column;
+    padding: .4rem;
+    width: 30%;
+    height: 100vh;
+    background-color: #080606;
+    color: white;
+    justify-content: center;
+    gap: .8rem;
+    z-index: 1;
+    align-self: flex-start;
+    /* opacity: 0; */
+    transition: 0.5s ease
+}
+
+.side-nav a{
+    color: rgba(228, 224, 224, 0.616);
+    font-size: 2.5rem;
+    position: relative;
+    text-align: left;
+    align-self: flex-start;
+    margin-left: 2%;
+    text-transform: capitalize;
+    transition: 0.5s;
+}
+
+.side-nav a.active {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.side-nav a:hover {
+    color: white;
+    margin-left: 4%;
+    transition: 0.5s;
+}
+
+
+.menu-toggle {
+    position: fixed;
+    top: 45vh;
+    left: 3%;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .4rem;
+}
+
+.menu-toggle:hover {
+    cursor: crosshair;
+}
+.menu-toggle span:nth-child(1) {
+    width: 70%;
+    height: 4px;
+    background-color: rgb(10, 11, 14);
+    transition: 0.5s;
+    z-index: 2;
+}
+
+.menu-toggle span:nth-child(2) {
+    width: 100%;
+    height: 2px;
+    background-color: rgb(3, 3, 3);
+    transition: 0.5s;
+}
+
+.menu-toggle:hover span {
+    width: 100%;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.active-side-nav{
+    left: 0vh;
+    transition: 0.8s;
+ }
+ 
+ 
+ .active-toggle {
+     /* background-color: rgb(0, 174, 255); */
+    background-color: white;
+     top: 15%;
+     z-index: 2;
+    border-radius: 50%;
+     transition: 0.8s;
+ }
+ 
+ 
+
+
+/* SIDE NAV END */
 
 .links{
     display: flex;
@@ -80,11 +188,6 @@ button:hover {
     text-transform: inherit;
     margin-top: 8%;
 }
-/* .link:hover {
-    cursor: pointer;
-    border-bottom: 1px solid;
-    transition: border-bottom 4s ease;
-} */
  p{
     font-weight: 300;
 }
@@ -95,6 +198,7 @@ p{
     padding: .8rem;
 }
 
+/* BORDERBOTTOM LINK HOVER ANIMATION */
 a{
     color: black;
     text-decoration: none;
@@ -110,11 +214,13 @@ a:hover{
     cursor: crosshair;
 }
 
+
 a::before {
     content:'';
     width: 80%;
     height: 2px;
-    background-color: rgba(255, 255, 255, 0.486);
+    /* background-color: rgba(255, 255, 255, 0.486); */
+    background-color:transparent;
     position: absolute;
     left: 8%;
     top: 90%;
@@ -138,15 +244,51 @@ a:hover::before  {
     
 }
 
+/* BORDER ANIMATION END */
 .product-container {
     display: flex;
-    flex-wrap: nowrap;
-    width: 58%;
-    overflow-x: scroll;
+    flex-direction: column;
+    width: 40%;
+    height: 480px;
+    /* overflow-x: scroll; */
     align-self: center;
     gap: .8rem;
     position: relative;
+    justify-content: center;
 }
+
+
+.product-container img {
+    width: 50%;
+}
+
+.wrapper .mini-scroller{
+    align-self: center;
+    background-color: rgba(250, 235, 215, 0.397);
+    width: 180px;
+    margin-left: 4%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    height: 600px;
+    gap: .8rem;
+    border: 0
+}
+
+.wrapper .mini-scroller img{
+    align-self: center;
+    width:72%
+}
+
+
+.mini-scroller img:hover {
+    cursor: crosshair
+}
+
 .card-container{
     display: flex;
     flex-direction: column;
@@ -163,7 +305,7 @@ a:hover::before  {
 }
 
 .img-container img {
-    width: 50%
+    width: 80%
 }
 
 #name-block {
@@ -369,7 +511,6 @@ a:hover::before  {
 }
 
 #home-decor .text-info {
-    border-right: 2px solid grey;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -397,7 +538,7 @@ a:hover::before  {
 }
 
 
-#home-decor .text-info .mini-scroller {
+#home-decor .text-info .mini-scroller,.mini-scroller {
     position: relative;
     display: flex;
     overflow-x: scroll;
@@ -410,6 +551,18 @@ a:hover::before  {
     margin-left: -10%;
     border-right: 1px solid black;
     padding: 1rem;
+}
+
+.wrapper {
+    position: absolute;
+    /* background-color: antiquewhite; */
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    top: 20%;
+    left: 80%;
+    /* overflow-x: hidden; */
 }
 
 #home-decor .text-info .mini-scroller::-webkit-scrollbar {
@@ -459,4 +612,8 @@ a:hover::before  {
 
 .animate-placeholder {
     animation : slide-in 3000ms
+}
+
+.animate-calatrava {
+    animation: slide-in 3000ms
 }
