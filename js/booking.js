@@ -1,3 +1,4 @@
+// assert might not be compatible with your browser, if so, change to 'with'
 import weeklySchedule from '../calender.json' assert {type: 'json'};
 const calender = weeklySchedule.weeklySchedule;
 const textContent = document.querySelectorAll('.text-content');
@@ -20,54 +21,6 @@ const unAvailableContainer = document.createElement('div');
 
 function checkStatus(){
     calender.forEach((eachDay) => {
-        // if (eachDay.status === 'Y'){
-        //     // console.log(eachDay)
-
-
-        //     // render DOM
-        //     const cardContainer = document.createElement('div')
-        //     const hotelName = document.createElement('h3');
-        //     const status = document.createElement('p');
-        //     const infoContainer = document.createElement('div');
-        //     const price = document.createElement('p');
-        //     const location = document.createElement('p');
-        //     const bookNow = document.createElement('a');
-        //     const imgContainer = document.createElement('div')
-        //     const img = document.createElement('img');
-
-        //     bookNow.setAttribute('id', `${eachDay.hotel}`)
-        //     bookNow.setAttribute('class', `rendered-links`)
-        //     bookNow.href = '#'
-
-        //     hotelName.innerText = ` ${eachDay.hotel}`
-        //     status.innerText = `Available till ${eachDay.day}`
-        //     location.innerText = `Location: ${eachDay.location}`
-        //     price.innerText = `Price: £${eachDay.price.amount} per night`
-        //     img.src = eachDay.imageUrl
-        //     bookNow.innerText = `Book Now`
-
-        //     cardContainer.classList.add('render-card');
-        //     imgContainer.classList.add('render-img-container')
-        //     infoContainer.classList.add('render-info-container')
-        //     availableContainer.classList.add('render-scroll-container')
-
-        //     imgContainer.appendChild(img)
-
-        //     infoContainer.appendChild(status);
-        //     infoContainer.appendChild(price);
-        //     infoContainer.appendChild(location);
-            
-        //     cardContainer.appendChild(hotelName);
-        //     cardContainer.appendChild(imgContainer);
-        //     cardContainer.appendChild(infoContainer)
-        //     cardContainer.appendChild(bookNow);
-
-        //     availableContainer.appendChild(cardContainer)
-
-        //     document.querySelector('main').appendChild(availableContainer)
-        // }
-
-
         if(eachDay.status === 'N') {
             const cardContainer = document.createElement('div')
             const hotelName = document.createElement('h3');
@@ -118,7 +71,6 @@ function checkStatus(){
 
 
         if (eachDay.status === 'Y'){
-            // console.log(eachDay)
 
 
             // render DOM
