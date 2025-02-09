@@ -24,11 +24,7 @@ function returnLocalStorageCart(){
         })
     })
     
-    
 }
-
-
-
 
 
 let totalPrice = document.createElement('p')
@@ -122,12 +118,9 @@ document.addEventListener('DOMContentLoaded', async (e) => {
                 if (currentAmount > 0){
                     reduceBtn.disabled = false
                     reduceBtn.innerText = '-'
-
                 }
 
-
                })
-
 
                reduceBtn.addEventListener('click', (e) => {
                 // console.log(--currentAmount);
@@ -147,34 +140,19 @@ document.addEventListener('DOMContentLoaded', async (e) => {
                     reduceBtn.innerText = 'Remove'
                 }
 
-
                 })
 
-
-            
             } else {
                 return;
             }
         })
     })
     
-    // console.log(cart)
-
     // let totalPurchase
     let totalPurchaseArray = []
     let total = 0
 
     let totalPrice = document.createElement('p')
-
-    cart.forEach((item) => {
-        // total = total + item.total;
-        // totalPrice.innerText = `Total :£${total}.00`
-        // totalPrice.classList.add('render-totalPrice')
-
-        // body.appendChild(totalPrice)
-    })
-
-
     payBtn.addEventListener('click', (e) => {
 
         titles.forEach((title) => {
@@ -198,33 +176,6 @@ document.addEventListener('DOMContentLoaded', async (e) => {
                 }
             })
         })
-    
-
     })
-    // titles.forEach((title) => {
-    //     // check if it's in the cart
-    //     cart.forEach((item) => {
-
-    //         if ( title !== item.name){
-    //             console.log(title)
-    //             return;
-    //         } 
-
-    //         if (title === item.name) {
-    //             total = total + item.total
-    //             totalPrice.innerText = `Total :£${total}.00`
-    //             totalPrice.classList.add('render-totalPrice')
-        
-    //             body.appendChild(totalPrice)
-        
-    //             console.log(total)
-    //             // console.log(item.total)
-    //         }
-    //     })
-    // })
-
-
-
-
    
 });

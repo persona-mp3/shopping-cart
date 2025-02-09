@@ -17,8 +17,6 @@ const hoverImg = document.querySelectorAll('.hover-img');
 const imgPlaceholder= document.getElementById('image-placeholder')
 // const prodImg = document.getElementById('prod-img')
 
-
-
 export function productNaviagtor(){
     clatarvaProducts.forEach((product) => {
         
@@ -84,46 +82,29 @@ function calatravaAnimation(){
 
             eachImg.addEventListener('mouseover', (e) => {
                 calatravaPlaceholder.src = eachImg.src
-                calatravaContainer.classList.add('animate-calatrava')
+                calatravaContainer.classList.toggle('animate-calatrava')
     
                 if (eachImg.id === image.name){
                     imgTitle.innerText = image.title
                 } else {
                     return;
                 }
-                
-    
             })
     
             eachImg.addEventListener('mouseout', (e) => {
-                calatravaPlaceholder.classList.remove('animate-calatrava')
+                calatravaContainer.classList.toggle('animate-calatrava')
             })
-    
-    
-
         })
-        // eachImg.addEventListener('mouseover', (e) => {
-        //     calatravaPlaceholder.src = eachImg.src
-        //     calatravaContainer.classList.add('animate-calatrava')
-
-            
-            
-
-        // })
-
-        // eachImg.addEventListener('mouseout', (e) => {
-        //     calatravaPlaceholder.classList.remove('animate-calatrava')
-        // })
-
     })
 
 }
 
-
 menuToggle.addEventListener('click', (e) => {
     sideNav.classList.toggle('active-side-nav')
     menuToggle.classList.toggle('active-toggle')
+
 })
+
 calatravaAnimation()
 wabisSabiAnimation()
 

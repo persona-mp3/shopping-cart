@@ -1,0 +1,172 @@
+{
+  "weeklySchedule": [
+    {
+      "day": "Monday 23",
+      "status": "Y",
+      "hotel": "Palacio Duhau",
+      "location": "Manchester",
+      "price": {
+        "amount": 450,
+        "currency": "USD",
+        "perNight": true
+      },
+      "imageUrl": "img/reserves/duha.jpg"
+    },
+    {
+      "day": "Tuesday 24",
+      "status": "N",
+      "hotel": "Casa Coloniales",
+      "location": "London",
+      "price": {
+        "amount": 285,
+        "currency": "USD",
+        "perNight": true
+      },
+      "imageUrl": "img/reserves/filename.jpg"
+    },
+    {
+      "day": "Wednesday 25",
+      "status": "Y",
+      "hotel": "Gran Torre Santiago",
+      "location": "Manchester",
+      "price": {
+        "amount": 520,
+        "currency": "USD",
+        "perNight": true
+      },
+      "imageUrl": "img/reserves/image1.jpg"
+    },
+    {
+      "day": "Thursday 26",
+      "status": "Y",
+      "hotel": "Luciano K Hotel",
+      "location": "London",
+      "price": {
+        "amount": 315,
+        "currency": "USD",
+        "perNight": true
+      },
+      "imageUrl": "img/reserves/image2.jpg"
+    },
+    {
+      "day": "Friday 27",
+      "status": "N",
+      "hotel": "Hotel Cumbres Lastarria",
+      "location": "Manchester",
+      "price": {
+        "amount": 380,
+        "currency": "USD",
+        "perNight": true
+      },
+      "imageUrl": "img/reserves/image3.jpg"
+    },
+    {
+      "day": "Saturday 28",
+      "status": "Y",
+      "hotel": "Singular Santiago",
+      "location": "London",
+      "price": {
+        "amount": 475,
+        "currency": "USD",
+        "perNight": true
+      },
+      "imageUrl": "img/reserves/image4.jpg"
+    },
+    {
+      "day": "Sunday 29",
+      "status": "N",
+      "hotel": "Casa Bueras",
+      "location": "Manchester",
+      "price": {
+        "amount": 295,
+        "currency": "USD",
+        "perNight": true
+      },
+      "imageUrl": "img/reserves/image5.jpg"
+    },
+    {
+      "day": "Monday 30",
+      "status": "Y",
+      "hotel": "W Santiago",
+      "location": "London",
+      "price": {
+        "amount": 550,
+        "currency": "USD",
+        "perNight": true
+      },
+      "imageUrl": "img/reserves/image6.jpg"
+    },
+    {
+      "day": "Tuesday 31",
+      "status": "Y",
+      "hotel": "Renaissance Santiago",
+      "location": "Manchester",
+      "price": {
+        "amount": 420,
+        "currency": "USD",
+        "perNight": true
+      },
+      "imageUrl": "img/reserves/image7.jpg"
+    },
+    {
+      "day": "Wednesday 1",
+      "status": "N",
+      "hotel": "Hotel Plaza San Francisco",
+      "location": "London",
+      "price": {
+        "amount": 340,
+        "currency": "USD",
+        "perNight": true
+      },
+      "imageUrl": "img/reserves/image8.jpg"
+    },
+    {
+      "day": "Thursday 2",
+      "status": "Y",
+      "hotel": "NH Collection Plaza",
+      "location": "Manchester",
+      "price": {
+        "amount": 390,
+        "currency": "USD",
+        "perNight": true
+      },
+      "imageUrl": "img/reserves/image9.jpg"
+    },
+    {
+      "day": "Friday 3",
+      "status": "N",
+      "hotel": "Ritz-Carlton Santiago",
+      "location": "London",
+      "price": {
+        "amount": 580,
+        "currency": "USD",
+        "perNight": true
+      },
+      "imageUrl": "img/reserves/image10.jpg"
+    },
+    {
+      "day": "Saturday 4",
+      "status": "Y",
+      "hotel": "Mandarin Oriental",
+      "location": "Manchester",
+      "price": {
+        "amount": 610,
+        "currency": "USD",
+        "perNight": true
+      },
+      "imageUrl": "img/reserves/image11.jpg"
+    },
+    {
+      "day": "Sunday 5",
+      "status": "Y",
+      "hotel": "Four Seasons Santiago",
+      "location": "London",
+      "price": {
+        "amount": 595,
+        "currency": "USD",
+        "perNight": true
+      },
+      "imageUrl": "img/reserves/image12.jpg"
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+body {
+    gap: .8rem;
+}
+
+.menu-toggle {
+    z-index: 2;
+}
+
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+    width: 100%;
+    position: relative;
+    align-self: center;
+}
+
+.render-card {
+    display: flex;
+    flex-direction: column;
+    width: 28%;
+    border: var(--border);
+    justify-content: space-evenly;
+    gap: .4rem;
+    padding: .4rem;
+    align-items: center;
+    border-radius: 7px;
+    position: relative;
+    margin: .4rem;
+    box-shadow:1px 1px 2px rgba(128, 128, 128, 0.541) ;
+    background-color: white;
+    --before-color : rgb(31, 189, 78);
+    flex-shrink: 0;
+}
+
+
+.render-img-container {
+    width: 80%;
+    /* padding: .4rem; */
+}
+
+.render-img-container img {
+    width: 300px;
+    height: 300px;
+}
+
+.render-card *{
+    text-align: center;
+}
+
+.render-card h3 {
+    color: rgb(37, 36, 36)
+
+}
+
+.render-scroll-container {
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    gap: .4rem;
+    justify-content:space-between;
+    overflow-x: scroll;
+    align-self: center;
+    padding: .8rem;
+
+}
+
+.render-scroll-container::webkit-scrollbar{
+    height: 4px;
+}
+
+.render-scroll-container::webkit-scrollbar-track {
+    background-color: grey;
+    border-radius: 3px;
+}
+
+.render-scroll-container::webkit-scrollbar-track-thumb {
+    background-color: black;
+    border-radius: 3px;
+}
+
+.render-scroll-container::webkit-scrollbar-thumb:hover {
+
+}
+
+
+.render-card:hover {
+    box-shadow:2px 2px 2px rgba(70, 68, 68, 0.801) ;
+
+    transition: 0.3s;
+}
+
+.render-card::before {
+    content: '';
+    background-color: var(--before-color, orange);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    position: absolute;
+    right: -16px;
+    top: -16px;
+    z-index: -1;
+    box-shadow:1px 1px 2px grey ;
+}
+
+.render-card a {
+    border: 1px solid grey;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.render-card a:hover {
+    border:1px solid transparent;
+    transition: 0.8s;
+}
+
+.render-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.render-info-container p{
+    width: 100%;
+    text-align: left;
+}
+
+.render-info-container p:nth-child(1) {
+    border-bottom: 1px solid black;
+}
+.booking-form {
+    width:60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    gap: .4rem;
+    width: 50%;
+    align-self: center;
+}
+.booking-form .hotel-name {
+    border-bottom: 1px solid;
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-control:nth-child(1) p {
+   width: 100%;
+   box-shadow:1px 1px 2px grey ;
+}
+
+#nights, #total {
+    border: none;
+   box-shadow:1px 1px 2px grey ;
+   /* pointer-events: none; */
+
+}
+.form-control:nth-child(1) p span{
+    font-weight: 500;
+}
+
+.form .form-control:nth-child(4){
+    flex-direction: row;
+    justify-content: center;
+    gap: .4rem;
+    width: 40%
+}
+.form .form-control:nth-child(3) button {
+    border: 1px solid rgba(128, 128, 128, 0.283)
+}
+
+#addBtn:hover, #reduceBtn:hover {
+    border: 1px solid black;
+    transition: 0.8s;
+}
+
+
+.navigate {
+    position: fixed;
+    /* top: 100vh; */
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+    width: 42%;
+    height: 100vh;
+    right: -100vh;
+    backdrop-filter:blur(20px)
+}
+
+.active-form {
+    right: 0vh;
+    transition: 0.8s;
+}
+
+.navigate .prod-2 {
+    width: 100%
+}
+.navigate .prod-2 img {
+    width:100%
+}
