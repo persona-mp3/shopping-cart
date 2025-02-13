@@ -557,7 +557,7 @@ a:hover::before  {
     height: 200px;
     gap: .8rem;
     width: 86%;
-    margin-top: 8%;
+    /* margin-top: 4%; */
     scrollbar-width: thin;
     scrollbar-color: white transparent;
     margin-left: -10%;
@@ -565,6 +565,7 @@ a:hover::before  {
     padding: 1rem;
     box-shadow: 1px 1px 2px grey;
 }
+
 
 .wrapper {
     position: absolute;
@@ -579,9 +580,8 @@ a:hover::before  {
 }
 
 #home-decor .text-info .mini-scroller::-webkit-scrollbar {
-    width: 4px
+    display: none;
 }
-
 #home-decor .text-info .mini-scroller::-webkit-scrollbar-track {
     background-color: white;
     width: 10px !important;
@@ -610,9 +610,9 @@ a:hover::before  {
 @keyframes slide-in {
     from {
         /* transform: translateX(10%); */
-        transform: scale(0.8, 0.8);
-        opacity: 76%;
-        transition: 0.8s ease;
+        /* transform: scale(0.8, 0.8); */
+        opacity: 50%;
+        transition: opacity ease .2s ;
 
     }
 
@@ -620,7 +620,7 @@ a:hover::before  {
         /* transform: translateX(0%); */
         transform: scale(1,1);
         opacity: 100%;
-        transition: 0.8s ease 0.2s;
+        transition: opacity ease .2s;
 
     }
 }
@@ -630,5 +630,49 @@ a:hover::before  {
 }
 
 .animate-calatrava {
-    animation: slide-in 3000ms
+    animation: slide-in 10000ms
+}
+
+
+
+
+
+.le-cobousier, .wabi {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.carousel-wrapper {
+    position: relative;
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    aspect-ratio: 16/9;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: .24rem;
+    box-shadow: 0 1.5rem 3rem -0.75rem rgba(128, 128, 128, 0.842);
+}
+
+.carosuel img {
+    flex-shrink: 0;
+    flex-grow: 1;
+    flex-basis: 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.le-cobousier a{
+    font-size: larger;
 }
